@@ -1,0 +1,60 @@
+{
+  "name": "ektro-twin",
+  "version": "0.1.0",
+  "description": "Digital Twin SDK — Let AI understand who your users are, not just what they said.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "digital-twin",
+    "user-understanding",
+    "personality",
+    "agent",
+    "llm",
+    "memory",
+    "profile"
+  ],
+  "author": "Ektro <hello@ektroai.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ektro-ai/ektro-twin.git"
+  },
+  "homepage": "https://ektroai.com",
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "better-sqlite3": ">=11.0.0",
+    "@supabase/supabase-js": ">=2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "better-sqlite3": {
+      "optional": true
+    },
+    "@supabase/supabase-js": {
+      "optional": true
+    }
+  }
+}
