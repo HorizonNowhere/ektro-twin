@@ -21,6 +21,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -40,14 +42,19 @@
     "url": "https://github.com/ektro-ai/ektro-twin.git"
   },
   "homepage": "https://ektroai.com",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@types/node": "^25.4.0",
     "tsup": "^8.0.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "vitest": "^4.0.18"
   },
   "peerDependencies": {
-    "better-sqlite3": ">=11.0.0",
-    "@supabase/supabase-js": ">=2.0.0"
+    "@supabase/supabase-js": ">=2.0.0",
+    "better-sqlite3": ">=11.0.0"
   },
   "peerDependenciesMeta": {
     "better-sqlite3": {
